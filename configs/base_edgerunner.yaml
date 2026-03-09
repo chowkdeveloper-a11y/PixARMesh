@@ -1,0 +1,20 @@
+model:
+  vocab_size: 576 # 519 and padding to multiple of 64
+  num_pos_tokens: 512
+  bos_token_id: 1
+  eos_token_id: 2
+  pad_token_id: 0
+  sep_token_id: 518
+  indicator_token_id: 518
+  prefix_len: 2049
+  pc_latent_len: 2048
+  cond: True
+  local_path: zx1239856/edgerunner
+  local_cond_path: zx1239856/edgerunner-pc-encoder
+  cond_enc_type: edgerunner
+  ar_model_type: edgerunner
+  tokenization_method: edgerunner
+  max_seq_length: 43019
+  pos_token_offset: 6
+  layout_tokenization_method: full
+  loss_layout_scale: null

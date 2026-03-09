@@ -1,0 +1,69 @@
+all:
+  name: base
+  output_dir: outputs/${all.name}
+  sub_dir: ${oc.env:RUN_TS}
+
+hydra:
+  job:
+    env_set:
+      OMP_NUM_THREADS: 1
+  run:
+    dir: ${all.output_dir}/${all.sub_dir}/hydra
+
+model:
+  vocab_size: 0
+  num_pos_tokens: 0
+  bos_token_id: 0
+  eos_token_id: 0
+  pad_token_id: 0
+  prefix_len: 0
+  cond: False
+  local_path: ""
+  local_cond_path: ""
+  cond_enc_type: ""
+  ar_model_type: ""
+  tokenization_method: ""
+  max_seq_length: 8192
+  max_position_embeddings: ${model.max_seq_length}
+  pos_token_offset: 0
+
+data:
+  type: ""
+  path: ""
+  num_pos_tokens: ${model.num_pos_tokens}
+  num_points: -1
+  norm_bound: 0.9995
+
+train:
+  train_args:
+    output_dir: ${all.output_dir}/${all.sub_dir}/checkpoints
+    logging_dir: ${all.output_dir}/${all.sub_dir}/logs
+    report_to: tensorboard
+    eval_strategy: steps
+    save_strategy: steps
+    logging_strategy: steps
+    logging_steps: 1
+    per_device_train_batch_size: 8
+    per_device_eval_batch_size: 8
+    gradient_accumulation_steps: 1
+    learning_rate: 1e-4
+    weight_decay: 0.1
+    adam_beta1: 0.9
+    adam_beta2: 0.95
+    max_grad_norm: 1.0
+    max_steps: 10_000
+    lr_scheduler_type: warmup_stable_decay
+    lr_scheduler_kwargs:
+      num_stable_steps: 0
+      num_decay_steps: ${sub:${train.train_args.max_steps}, ${train.train_args.warmup_steps}}
+      min_lr_ratio: 0.1
+    warmup_steps: 500
+    save_steps: 1000
+    eval_steps: 1000
+    dataloader_num_workers: 8
+    dataloader_prefetch_factor: 2
+    dataloader_persistent_workers: False
+    ddp_find_unused_parameters: False
+    gradient_checkpointing: True
+    gradient_checkpointing_kwargs:
+      use_reentrant: False

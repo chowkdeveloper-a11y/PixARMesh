@@ -1,0 +1,21 @@
+defaults:
+  - base_config
+  - base_3d_front_ar
+  - base_bpt
+  - _self_
+
+all:
+  name: bpt-3d-front-global-obj-pose
+
+data:
+  num_points: 4096
+  with_normals: True
+
+train:
+  train_args:
+    per_device_train_batch_size: 4
+    per_device_eval_batch_size: 2
+    gradient_accumulation_steps: 2
+    max_steps: 25000
+    save_steps: 1000
+    eval_steps: 1000

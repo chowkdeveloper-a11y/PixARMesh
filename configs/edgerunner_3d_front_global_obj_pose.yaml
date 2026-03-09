@@ -1,0 +1,20 @@
+defaults:
+  - base_config
+  - base_3d_front_ar
+  - base_edgerunner
+  - _self_
+
+all:
+  name: edgerunner-3d-front-global-obj-pose
+
+data:
+  num_points: 8192
+
+train:
+  train_args:
+    per_device_train_batch_size: 4
+    per_device_eval_batch_size: 2
+    gradient_accumulation_steps: 2
+    max_steps: 30000
+    save_steps: 3000
+    eval_steps: 3000

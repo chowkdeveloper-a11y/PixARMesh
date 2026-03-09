@@ -1,0 +1,20 @@
+model:
+  vocab_size: 5184 # 5122 and padding to multiple of 64
+  num_pos_tokens: 128
+  bos_token_id: -100
+  eos_token_id: 5120
+  pad_token_id: -1
+  sep_token_id: 5121
+  indicator_token_id: 5121
+  prefix_len: 0
+  pc_latent_len: 0
+  cond: True
+  local_path: zx1239856/bpt-8-16-500m
+  local_cond_path: zx1239856/miche-encoder-bpt
+  cond_enc_type: miche
+  ar_model_type: bpt
+  tokenization_method: bpt
+  max_seq_length: 10000
+  pos_token_offset: 0
+  layout_tokenization_method: full
+  loss_layout_scale: null

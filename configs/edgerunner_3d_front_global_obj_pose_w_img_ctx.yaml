@@ -1,0 +1,7 @@
+defaults:
+  - edgerunner_3d_front_global_obj_pose_w_img
+  - base_pc_enable_ctx
+  - _self_
+
+all:
+  name: edgerunner-3d-front-global-obj-pose-w-img-ctx

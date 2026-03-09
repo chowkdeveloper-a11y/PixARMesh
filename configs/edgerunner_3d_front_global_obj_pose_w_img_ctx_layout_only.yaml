@@ -1,0 +1,7 @@
+defaults:
+  - edgerunner_3d_front_global_obj_pose_w_img_ctx
+  - base_edgerunner_layout_only
+  - _self_
+
+all:
+  name: edgerunner-3d-front-global-obj-pose-w-img-ctx-layout-only

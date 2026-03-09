@@ -1,0 +1,13 @@
+data:
+  type: 3d-front
+  path: datasets/3d-front-ar-packed-flattened
+  norm_bound: 0.95
+  mesh_path: datasets/3d-front-meshes
+  random_rotate_min: -45.0
+  random_rotate_max: 45.0
+  random_shift: True
+  random_shift_max: 0.2
+  visualize: False
+  mask_path: datasets/3d-front-panoptic
+  mask_erosion_size: 3
+  use_masked_obj_pc: True

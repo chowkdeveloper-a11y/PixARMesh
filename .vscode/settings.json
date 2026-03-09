@@ -1,0 +1,10 @@
+{
+    "python.analysis.exclude": [
+        "datasets",
+        "outputs",
+        "models",
+        "**/node_modules",
+        "**/__pycache__",
+        "**/.*"
+    ]
+}

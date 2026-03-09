@@ -1,0 +1,11 @@
+model:
+  img_cond: True
+  image_encoder: facebook/dinov2-with-registers-small
+  high_res_image_encoder: False
+  freeze_cond_encoder: False
+
+data:
+  random_jitter_point_clouds: False # We might want to disable this when using pixel-aligned image conditioning
+  load_images: True
+  image_preprocessor: facebook/dpt-dinov2-small-nyu
+  image_size_divisor: 28

@@ -1,0 +1,12 @@
+data:
+  ignore_obj_seq: True
+
+train:
+  train_args:
+    per_device_train_batch_size: 8
+    per_device_eval_batch_size: 8
+    gradient_accumulation_steps: 1
+    max_steps: 30000
+    warmup_steps: 500
+    save_steps: 5000
+    eval_steps: 5000

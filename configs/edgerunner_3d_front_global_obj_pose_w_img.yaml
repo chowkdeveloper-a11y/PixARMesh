@@ -1,0 +1,7 @@
+defaults:
+  - edgerunner_3d_front_global_obj_pose
+  - base_img_cond_dinov2
+  - _self_
+
+all:
+  name: edgerunner-3d-front-global-obj-pose-w-img
